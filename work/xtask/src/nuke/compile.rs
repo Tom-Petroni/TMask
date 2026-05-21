@@ -157,6 +157,15 @@ fn get_rust_target(target: TargetPlatform) -> String {
     .to_string()
 }
 
+fn packaged_binary_name(target: TargetPlatform) -> String {
+    match target {
+        TargetPlatform::Windows => "TMask.dll",
+        TargetPlatform::Linux => "libTMask.so",
+        TargetPlatform::MacosAarch64 | TargetPlatform::MacosX86_64 => "libTMask.dylib",
+    }
+    .to_string()
+}
+
 async fn compile_native(
     version: &str,
     target: TargetPlatform,
@@ -204,7 +213,7 @@ async fn compile_native(
         tokio::fs::create_dir_all(&out_dir).await?;
     }
 
-    let output_dylib = out_dir.join(format!("TMask.{}", dll_suffix(target)));
+    let output_dylib = out_dir.join(packaged_binary_name(target));
     let build_lib = path_to_string(
         &target_directory()
             .join(get_rust_target(target))
@@ -266,7 +275,7 @@ async fn compile_zig(
         tokio::fs::create_dir_all(&out_dir).await?;
     }
 
-    let output_dylib = out_dir.join(format!("TMask.{}", dll_suffix(target)));
+    let output_dylib = out_dir.join(packaged_binary_name(target));
     let build_lib = path_to_string(
         &target_directory()
             .join(get_rust_target(target))

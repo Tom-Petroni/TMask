@@ -64,6 +64,14 @@ nuke.pluginAddPath(r"C:/Users/<user>/.nuke/TMask")
 
 - `work/docs/NODE_REFERENCE.md`
 
+## Build CI GitHub
+
+Le repo contient un workflow GitHub Actions (`.github/workflows/nuke-build.yml`) qui:
+
+- build les versions Nuke 13.0 -> 17.0
+- build Windows/Linux/macOS (x86_64 + arm64 quand disponible)
+- genere un zip de release pret a copier dans `.nuke`
+
 ## Licence
 
 Usage commercial soumis a la licence du repo (`LICENSE` + `EULA.md`).
