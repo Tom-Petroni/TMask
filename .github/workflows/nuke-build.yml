@@ -136,7 +136,7 @@ jobs:
                           }
                       )
 
-                  if parse_minor(version) >= (15, 0):
+                  if parse_minor(version) >= (15, 0) and version != "17.0":
                       include.append(
                           {
                               "runner": "macos-14",
@@ -298,3 +298,4 @@ jobs:
           tag_name: ${{ github.ref_name }}
           generate_release_notes: true
           token: ${{ secrets.GITHUB_TOKEN }}
+
