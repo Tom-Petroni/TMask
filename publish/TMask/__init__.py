@@ -1,0 +1,2 @@
+"""TMask Nuke plugin package."""
+

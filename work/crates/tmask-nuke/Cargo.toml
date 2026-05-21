@@ -1,0 +1,16 @@
+[package]
+name = "tmask-nuke"
+version = "0.1.0"
+edition = "2024"
+links = "DDImage"
+publish = false
+
+[lib]
+name = "tmask_nuke"
+crate-type = ["cdylib"]
+
+[dependencies]
+
+[build-dependencies]
+cc = "1.2"
+

@@ -1,0 +1,12 @@
+{
+  "key": "TMask",
+  "label": "TMask",
+  "version": "0.1.0",
+  "status": "stable",
+  "class_name": "TMask",
+  "bootstrap_module": "TMask.init",
+  "python_path": "publish",
+  "work_path": "work",
+  "publish_path": "publish",
+  "notes": ""
+}

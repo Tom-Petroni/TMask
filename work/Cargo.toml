@@ -1,0 +1,7 @@
+[workspace]
+members = [
+    "crates/tmask-nuke",
+    "xtask",
+]
+resolver = "2"
+
