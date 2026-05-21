@@ -1,4 +1,4 @@
-# TMask
+﻿# TMask
 
 Standalone TSuite node repository.
 
@@ -22,3 +22,8 @@ TMask/
 
 This repository follows the TSuite node architecture derived from TNoise.
 Build/release CI can be attached using your standard node workflow.
+
+## Fiche Rapide
+
+- Voir FICHE_NODE_FR.md pour la compilation et l'installation.
+
