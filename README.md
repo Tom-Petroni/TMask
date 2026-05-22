@@ -42,17 +42,20 @@ Exemples cibles:
 - macOS Intel: `--target-platform macos-x86-64`
 - macOS Apple Silicon: `--target-platform macos-aarch64`
 
-## Installer dans Nuke
+## Installer dans Nuke (utilisateur final)
 
-1. Copier `publish/TMask` vers `C:/Users/<user>/.nuke/TMask`
-2. Dans `C:/Users/<user>/.nuke/init.py`, ajouter:
+1. Cloner le repo
+2. Glisser `publish/TMask` dans `C:/Users/<user>/.nuke/`
+3. Redemarrer Nuke
+
+Les binaires (`.dll`, `.so`, `.dylib`) sont versionnes dans `publish/TMask/bin/...`.
+
+Si ton setup Nuke ne charge pas automatiquement le dossier, ajoute en fallback dans `.nuke/init.py`:
 
 ```python
 import nuke
 nuke.pluginAddPath(r"C:/Users/<user>/.nuke/TMask")
 ```
-
-3. Redemarrer Nuke
 
 ## Verification rapide
 
