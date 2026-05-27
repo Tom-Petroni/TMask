@@ -75,6 +75,14 @@ Le repo contient un workflow GitHub Actions (`.github/workflows/nuke-build.yml`)
 - build Windows/Linux/macOS (x86_64 + arm64 quand disponible)
 - genere un zip de release pret a copier dans `.nuke`
 
+## Branching et releases
+
+Le modele de branches et de release est documente dans `CONTRIBUTING.md`.
+
+- branches standard: `main`, `dev`, `release/*`, `hotfix/*`
+- feature branches: `feat/*`, `fix/*`, `chore/*`
+- tag auto depuis `VERSION` via `.github/workflows/version-tag.yml`
+
 ## Licence
 
 Usage commercial soumis a la licence du repo (`LICENSE` + `EULA.md`).
